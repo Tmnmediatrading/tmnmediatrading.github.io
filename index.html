@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMNMEDIA SIGNAL ALERT SET UP</title>
+    <script src="git25.js" onload="log()" ></script>
+
+    <style>
+        * {
+/* Change your font family */
+font-family: sans-serif;
+}
+
+.content-table {
+border-collapse: collapse;
+margin: 25px 0;
+font-size: 0.9em;
+min-width: 400px;
+border-radius: 5px 5px 0 0;
+overflow: hidden;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+background-color: #009879;
+color: #ffffff;
+text-align: center;
+font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+padding: 12px 15px;
+}
+
+.content-table tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+font-weight: bold;
+color: #009879;
+}
+</style>
+</head>
+<body style="text-align: center;">
+    <h2>TMNMEDIA SIGNAL ALERT</h2>
+    <h3 style="text-align: center;" id='datupdte'>====================</h3><h1 id='tick-time'>---</h1><h3>====================</h3>
+    <h3 id='datupdte2'>--</h3>
+    <section style="text-align: center; align-content: center;">
+    
+        
+        <div style="text-align: center; align-content: center; padding: 10px;">
+            <table border= '2' class="content-table" style="
+            display: inline-block;
+            text-decoration: none;
+            text-size-adjust: auto;
+            font-size: medium;
+            background-color: rgb(255, 253, 253);
+            color: rgb(6, 6, 6);
+            margin: 5px auto;
+            padding: 1px;
+            box-sizing: content-box;
+            text-size-adjust: auto;
+            text-align: center;">
+            
+            <tr>
+              <h2 style="text-align: center;">BEAR-SIGNAL SET UP BELOW</h2>
+          
+                <th> LAST-TICK VALUE </th>
+                <th> PREVIOUS BAR SIZE </th>
+                <th> CURRENT BAR SIZE </th>
+                <th> SIGNAL SET-UP  </th>
+                <th> ENTRY SET-UP.   </th>
+                <th> EXIT-TICK-VALUE </th>
+                <th> ENTRY-TICK-VALUE </th>
+                <th> ENTRY-STATUS </th>
+                <th> TRADE-WON </th>
+                <th> TRADE-LOST  </th>
+                <th> WIN-RATE % </th>
+            </tr>
+            <tr style="font-weight: bold; text-size-adjust: auto;">
+                <td id="lastick25">---</td>
+                <td id="prebar25">---</td>
+                <td id="curbar25">---</td>
+                <td id="signal25">---</td>
+                <td id="entry25">---</td>
+                <td id="exitick25">---</td>
+                <td id="entrytick25">---</td>
+                <td id="entrystatus25">---</td>
+                <td id="tradewon">---</td>
+                <td id="tradelost">---</td>
+                <td id="winratio">---</td>
+            </tr>
+            
+      
+        </table>
+        </div>
+        
+      </section>
+
+      <section style="text-align: center; align-content: center;">
+    
+        
+        <div style="text-align: center; align-content: center; padding: 10px;">
+            <table border= '2' class="content-table" style="
+            display: inline-block;
+            text-decoration: none;
+            text-size-adjust: auto;
+            font-size: medium;
+            background-color: rgb(255, 253, 253);
+            color: rgb(6, 6, 6);
+            margin: 5px auto;
+            padding: 1px;
+            box-sizing: content-box;
+            text-size-adjust: auto;
+            text-align: center;">
+            
+            <tr>
+              <h2 style="text-align: center;">25 INDEX SIGNAL SET UP BELOW</h2>
+          
+                <th> LAST-TICK VALUE </th>
+                <th> PREVIOUS BAR SIZE </th>
+                <th> CURRENT BAR SIZE </th>
+                <th> SIGNAL SET-UP  </th>
+                <th> ENTRY SET-UP.   </th>
+                <th> EXIT-TICK-VALUE </th>
+                <th> ENTRY-TICK-VALUE </th>
+                <th> ENTRY-STATUS </th>
+                <th> TRADE-WON </th>
+                <th> TRADE-LOST  </th>
+                <th> WIN-RATE % </th>
+            </tr>
+            <tr style="font-weight: bold; text-size-adjust: auto;">
+                <td id="lastick">---</td>
+                <td id="prebar">---</td>
+                <td id="curbar">---</td>
+                <td id="signal">---</td>
+                <td id="entry">---</td>
+                <td id="exitick">---</td>
+                <td id="entrytick">---</td>
+                <td id="entrystatus">---</td>
+                <td id="tradewonb">---</td>
+                <td id="tradelostb">---</td>
+                <td id="winratiob">---</td>
+            </tr>
+            
+      
+        </table>
+        </div>
+        
+      </section>
+    
+      <div style="margin-bottom:0; align-content: center;padding-inline: 10px;">
+        TMNmedia Trading Bot 2024..... STATUS <button id= "checkOnline" value="" style="background-color: #888;"></button>
+      </div><br>
+    
+    
+    
+    <script src="gitbear.js"></script>
+    
+    <script>
+        if (Notification.permission === "granted") {
+            //showNotification();
+            //alert("Notifications Permitted")
+            console.log('Notifications Permitted =')
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(permission =>{
+                
+                if (permission === "granted") {
+                    console.log('Notification =', permission)
+                    //showNotification();
+                }
+                //bussylow-signal.js
+            });
+        } 
+
+
+    setInterval(function(){ 
+  
+    var ifConnected = window.navigator.onLine;
+    
+    if (ifConnected) {
+        document.getElementById("checkOnline").innerHTML = "Online";
+        document.getElementById("checkOnline").style.color = "yellow";
+        document.getElementById("checkOnline").style.backgroundColor = "green";
+    } else {
+        document.getElementById("checkOnline").innerHTML = "Offline";
+        document.getElementById("checkOnline").style.color = "Black";
+        document.getElementById("checkOnline").style.backgroundColor = "red";
+    }
+  
+    
+  }, 1000);
+    </script>
+</body>
+</html>
