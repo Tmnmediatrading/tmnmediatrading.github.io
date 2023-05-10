@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMNMEDIA SIGNAL ALERT SET UP</title>
+    
     <script src="git25.js" onload="log()" ></script>
-
+    
     <style>
         * {
 /* Change your font family */
@@ -54,13 +55,14 @@ color: #009879;
 </style>
 </head>
 <body style="text-align: center;">
-    <h2>TMNMEDIA SIGNAL ALERT</h2>
+    <h1>TMNMEDIA SIGNAL ALERT</h1>
     <h3 style="text-align: center;" id='datupdte'>====================</h3><h1 id='tick-time'>---</h1><h3>====================</h3>
     <h3 id='datupdte2'>--</h3>
-    <section style="text-align: center; align-content: center;">
+
+    
     
         
-        <div style="text-align: center; align-content: center; padding: 10px;">
+        <div id="bear" style="text-align: center; align-content: center; padding: 10px;">
             <table border= '2' class="content-table" style="
             display: inline-block;
             text-decoration: none;
@@ -71,7 +73,6 @@ color: #009879;
             margin: 5px auto;
             padding: 1px;
             box-sizing: content-box;
-            text-size-adjust: auto;
             text-align: center;">
             
             <tr>
@@ -107,12 +108,10 @@ color: #009879;
         </table>
         </div>
         
-      </section>
-
-      <section style="text-align: center; align-content: center;">
+    
     
         
-        <div style="text-align: center; align-content: center; padding: 10px;">
+        <div id="v25" style="text-align: center; align-content: center; padding: 10px;">
             <table border= '2' class="content-table" style="
             display: inline-block;
             text-decoration: none;
@@ -159,15 +158,32 @@ color: #009879;
         </table>
         </div>
         
-      </section>
-    
+      
+        <div>
+            <h2 style="text-align: center;">DETAILED INFO ON HOW TMNMEDIA SIGNAL WORKS</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eqV87oVbL1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <br><br>
+      <div>
+        <h2 style="text-align: center;">TRADING SAMPLE WITH SIGNAL ALERT</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eqV87oVbL1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <br><br>
+      <a href="https://t.me/TMNmediaSignalfree"><img src="https://i0.wp.com/kosherworkingmom.com/wp-content/uploads/2018/05/telegram-icon.png?fit=707%2C217&ssl=1" alt="HTML tutorial" style="width:180px;height:45px;"><br>JOIN TMNMEDIA ON TELEGRAM <br></a>
+      <button onclick='https://t.me/TMNmediaSignalfree' > </button>
+      
+      
+      
+      <br><br>
       <div style="margin-bottom:0; align-content: center;padding-inline: 10px;">
         TMNmedia Trading Bot 2024..... STATUS <button id= "checkOnline" value="" style="background-color: #888;"></button>
-      </div><br>
+        
+    </div><br>
     
     
     
     <script src="gitbear.js"></script>
+    
     
     <script>
         if (Notification.permission === "granted") {
@@ -198,10 +214,72 @@ color: #009879;
         document.getElementById("checkOnline").innerHTML = "Offline";
         document.getElementById("checkOnline").style.color = "Black";
         document.getElementById("checkOnline").style.backgroundColor = "red";
+
+        location.reload()
+        setTimeout(() => {
+            location.reload()
+            return
+        }, 300000);
+        
     }
   
     
   }, 1000);
+  
+        function checkserverS() {
+
+
+            var wsl = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=32150'); //1089
+            wsl.onopen = function(evt) {
+                    try { 
+                        wsl.send(JSON.stringify(
+                        {time: 1}),           
+                        );console.log('WEBSOCKET TIMER SERVER')
+            
+                        
+                    } catch (err) {
+                    
+                    }
+                    
+            }
+                
+            wsl.onmessage = function(msg) {         
+                try {
+                    var data = JSON.parse(msg.data);
+                    var timer = data.time
+                
+                // document.getElementById("servertimer").innerText = timer;
+                    //console.log('server-timer =>',timer,"====================");
+
+                    
+                    var devicetime = new Date();
+                    var servicetime = new Date(timer * 1000);
+                    var serversecs = servicetime.getSeconds();
+                    var systemsecs = devicetime.getSeconds();
+                    
+                    var tradetimer = servicetime.toLocaleTimeString();
+                    console.log( 'server-timer =>',serversecs,"====================","\n\r",'Device-timer =>',systemsecs);    
+                    //document.getElementById("servertimer").innerText = tradetimer;
+                        
+                        if (systemsecs > serversecs + 2 || systemsecs < serversecs - 2 ) {
+                            document.getElementById("v25").style.display = "none"
+                            checkservertimeB()
+                            checkservertimeB25()
+                        } else {
+                            document.getElementById("datupdte2").innerText = "TIME IS CONFIRMED =OK=";
+                            document.getElementById("datupdte2").style.color = "blue";
+                            // document.getElementById("v25").style.display = "none"
+                            // checkservertimeB()
+                            // checkservertimeB25()
+                        }
+
+                } catch (error) {
+                
+
+                } 
+            }
+        } checkserverS()
+
     </script>
 </body>
 </html>
