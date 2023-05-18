@@ -164,8 +164,8 @@ color: #009879;
 
       
         <div>
-            <h2 style="text-align: center;">DETAILED INFO ON HOW TMNMEDIA SIGNAL WORKS</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/eqV87oVbL1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h1 style="text-align: center;">DETAILED INFO - STEP BY STEP ON HOW TMNMEDIA SIGNAL WORKS</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iJDbc8s4u1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <br><br>
       <div>
@@ -207,7 +207,12 @@ color: #009879;
             });
         } 
 
+        function deleteItems() {
+            sessionStorage.clear();
+            console.log('Storage Cleared =>')
+        }deleteItems()
 
+        
     setInterval(function(){ 
   
     var ifConnected = window.navigator.onLine;
