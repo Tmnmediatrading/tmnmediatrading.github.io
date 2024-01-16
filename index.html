@@ -8,7 +8,7 @@
 
     <title>TMNMEDIA SIGNAL ALERT SET UP</title>
 
-    <script src="rd1025.js" onload="logbear(),logV10(),logV25()"></script>
+    <script src="rd1025.js" onload="logbear(),logV10(),logV25(),logV50()"></script>
 
     <style>
       * {
@@ -134,6 +134,57 @@
         <h3 style="text-align: center">====================</h3>
         <h3 style="text-align: center" id="datupdte2">--</h3>
       </div>
+
+      <div
+      id="v50"
+      style="
+        text-align: center;
+        align-content: center;
+        padding: 10px;
+        align-items: center;
+      "
+    >
+      <table
+        border="2"
+        class="content-table"
+        style="
+          /*display: inline-block;*/
+          text-decoration: none;
+          text-size-adjust: auto;
+          font-size: medium;
+          background-color: rgb(255, 253, 253);
+          color: rgb(6, 6, 6);
+          margin: 5px auto;
+          padding: 1px;
+          box-sizing: content-box;
+          text-align: center;
+          align-content: center;
+          align-items: center;
+          overflow-x: auto;
+          width: 100%;
+        "
+      >
+        <tr>
+          <h3 style="text-align: center">R_50 INDEX{GOES-OUTSIDE(+0.145/-0.168)2min} SET UP BELOW</h3>
+
+          <th>LAST-TICK VALUE</th>
+          <th>CURRENT BAR SIZE</th>
+          <th>SIGNAL SET-UP</th>
+          <th>ENTRY SET-UP.</th>
+          <th>TRADE - RESULT</th>
+          
+        </tr>
+        <tr style="font-weight: bold; text-size-adjust: auto">
+          <td id="lastick50">---</td>
+          <td id="curbar50">---</td>
+          <td id="signal50">---</td>
+          <td id="entry50">---</td>
+          <td id="traderesult50">---</td>
+          
+        </tr>
+      </table>
+    </div>
+
 
       <div
         id="bear"
@@ -359,18 +410,8 @@
         JOIN TMNMEDIA ON TELEGRAM
       </a>
 
-      <br /><br />
-      <div
-        style="margin-bottom: 0; align-content: center; padding-inline: 10px"
-      >
-        TMNmedia Trading Bot 2024..... STATUS
-        <button
-          id="checkOnline"
-          value=""
-          style="background-color: #888"
-        ></button>
-      </div>
-      <br />
+      
+      <br /><br /><br />
 
       <div style="text-align: center">
         <a href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/">
@@ -380,8 +421,111 @@
           />
         </a>
       </div>
+
+      <br /><br />
+    <section style="text-align: center; align-content: center; background-color: grey; margin: auto;align-content: center;
+    align-items: center;
+    padding: 10px 15px;">
+      <div
+      style="
+        display: grid;
+        align-content: center;
+
+        text-align: center;
+      "
+      >
+      <p style="font-size: smaller; align-content: center">
+          <span
+            style="
+              box-sizing: border-box;
+              color: black;
+              text-align: center;
+             
+            "
+            ><strong style="box-sizing: border-box">Disclaimer:</strong>
+            The products offered on the DERIV.COM website include binary options contracts for difference ("CFDs"), Synthetic index  and other complex derivatives. 
+            Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. 
+            As a result, the products offered on the website may not be suitable for all investors because of the risk of losing all of your invested capital. 
+            You should never invest money that you cannot afford to lose and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved. 
+            </span
+          >
+      </p>
+      
+      
+      <div
+        style="
+          box-sizing: border-box;
+          color: black;
+          align-content: center;
+          
+          text-align: center;
+        "
+      >
+        <p style="font-size: smaller; align-content: center">
+          <span
+            ><strong style="box-sizing: border-box">Note:</strong> This site
+            is not a part of the Facebook website or Facebook INC.
+            Additionally, this site is NOT endorsed by Facebook in ANY WAY.
+            FACEBOOK is a trademark of Facebook INC.</span
+          >
+        </p>
+      </div>
+
+      
     </div>
 
+    <div style="
+    box-sizing: border-box;
+    color: brown;
+    align-content: center;
+    
+    text-align: center;
+  ">
+      <p>
+        <span style="box-sizing: border-box; color: white"
+          ><a
+            
+            href="https://eu.docs.wps.com/l/sAJtriWO-5fxGg_iYoZSdFA?v=v2"
+            style="box-sizing: border-box; font-size: inherit"
+            target="_top"
+            >Privacy Policy</a
+          >
+          |
+          <a
+            
+            href="https://eu.docs.wps.com/l/sAL_WwoK-5fxG65aZoZSdFA?v=v2"
+            style="box-sizing: border-box; font-size: inherit"
+            target="_top"
+            >Disclaimer</a
+          >
+          |
+          <a
+            
+            href="https://wa.me/+2349011181115"
+            style="box-sizing: border-box; font-size: inherit"
+            target="_top"
+            >Contact Us</a
+          ></span
+        >
+      </p>
+    </div>
+
+    
+    <div
+      style="margin-bottom: 0; align-content: center; padding-inline: 10px"
+    >
+      TMNmedia Trading Bot 2024..... STATUS
+      <button
+        id="checkOnline"
+        value=""
+        style="background-color: #888"
+      ></button>
+    </div>
+    
+    </section>
+
+      
+    
     <script>
       if (Notification.permission === "granted") {
         //showNotification();
@@ -479,6 +623,15 @@
         };
       }
       checkserverS();
+
+      function checkservertimeB() {
+        
+        document.getElementById("bear").style.display = "none"
+        document.getElementById("v25").style.display = "none"
+        document.getElementById("v10").style.display = "none"
+
+        return;
+    } checkservertimeB()
     </script>
   </body>
 </html>
