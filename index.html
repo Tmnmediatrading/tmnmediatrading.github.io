@@ -8,7 +8,7 @@
 
     <title>TMNMEDIA SIGNAL ALERT SET UP</title>
 
-    <script src="rd1025.js" onload="logbear(),logV10(),logV25(),logV50()"></script>
+    <script src="rd1025.js" onload="logV50()"></script>
 
     <style>
       * {
@@ -132,7 +132,7 @@
         <h3 style="text-align: center" id="datupdte">====================</h3>
         <h1 style="text-align: center" id="tick-time">---</h1>
         <h3 style="text-align: center">====================</h3>
-        <h3 style="text-align: center" id="datupdte2">--</h3>
+        <h4 style="text-align: center" id="datupdte2">--</h4>
       </div>
 
       <div
@@ -443,7 +443,10 @@
              
             "
             ><strong style="box-sizing: border-box">Disclaimer:</strong>
-            Deriv offers complex derivatives, such as options and contracts for difference (“CFDs”). These products may not be suitable for all clients, and trading them puts you at risk. Please make sure that you understand the following risks before trading Deriv products: a) you may lose some or all of the money you invest in the trade, b) if your trade involves currency conversion, exchange rates will affect your profit and loss. You should never trade with borrowed money or with money that you cannot afford to lose. 
+            The products offered on the DERIV.COM website include binary options contracts for difference ("CFDs"), Synthetic index  and other complex derivatives. 
+            Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. 
+            As a result, the products offered on the website may not be suitable for all investors because of the risk of losing all of your invested capital. 
+            You should never invest money that you cannot afford to lose and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved. 
             </span
           >
       </p>
@@ -571,7 +574,7 @@
 
       function checkserverS() {
         var wsl = new WebSocket(
-          "wss://ws.binaryws.com/websockets/v3?app_id=32150"
+          "wss://ws.derivws.com/websockets/v3?app_id=32150"
         ); //1089
         wsl.onopen = function (evt) {
           try {
@@ -605,7 +608,7 @@
             //document.getElementById("servertimer").innerText = tradetimer;
 
             if (systemsecs > serversecs + 2 || systemsecs < serversecs - 2) {
-              document.getElementById("v25").style.display = "none";
+              document.getElementById("v50").style.display = "none";
               checkservertimeB();
               //checkservertimeB25();
             } else {
@@ -621,14 +624,14 @@
       }
       checkserverS();
 
-      function checkservertimeB() {
+      function checkserverti() {
         
         document.getElementById("bear").style.display = "none"
         document.getElementById("v25").style.display = "none"
         document.getElementById("v10").style.display = "none"
 
         return;
-    } checkservertimeB()
+    } checkserverti()
     </script>
   </body>
 </html>
