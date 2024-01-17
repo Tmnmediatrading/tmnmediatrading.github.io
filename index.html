@@ -6,8 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>TMNMEDIA SIGNAL ALERT SET UP</title>
+    <title>TMNMEDIA SIGNAL ALERT FREE</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css"
+      integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="rd1025.js" onload="logV50()"></script>
 
     <style>
@@ -23,11 +48,11 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         align-items: center;
-        width: 90%;
+        width: 100%;
         background: rgb(240, 236, 236);
       }
 
-      .container {
+      .containerr {
         position: absolute;
         right: 0;
         left: 0px;
@@ -39,6 +64,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+
+        min-height: 90vh;
       }
 
       .content-table {
@@ -68,6 +95,25 @@
         border-bottom: 1px solid #dddddd;
       }
 
+      tbody,
+      td,
+      tfoot,
+      th,
+      thead,
+      tr {
+        border-color: inherit;
+        border-style: solid;
+        border-width: thin;
+      }
+
+      th,
+      td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
       .content-table tbody tr:nth-of-type(even) {
         background-color: #f3f3f3;
       }
@@ -82,35 +128,35 @@
       }
 
       @media screen and (max-width: 576px) {
-        .container,
-        .container-sm {
+        .containerr,
+        .containerr-sm {
           width: 100%;
           padding: 0%;
         }
       }
       @media screen and (max-width: 768px) {
-        .container,
-        .container-md,
-        .container-sm {
+        .containerr,
+        .containerr-md,
+        .containerr-sm {
           width: 100%;
           padding: 0%;
         }
       }
       @media screen and (max-width: 1200px) {
-        .container,
-        .container-lg,
-        .container-md,
-        .container-sm,
-        .container-xl {
+        .containerr,
+        .containerr-lg,
+        .containerr-md,
+        .containerr-sm,
+        .containerr-xl {
           width: 100%;
           padding: 0%;
         }
       }
       @media screen and (max-width: 992px) {
-        .container,
-        .container-lg,
-        .container-md,
-        .container-sm {
+        .containerr,
+        .containerr-lg,
+        .containerr-md,
+        .containerr-sm {
           width: 100%;
           padding: 0%;
         }
@@ -118,17 +164,68 @@
 
       /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
       @media screen and (max-width: 400px) {
-        .container {
+        .containerr {
           float: none;
           width: 100%;
         }
       }
     </style>
+
+
+    <script src="rd1025.js" onload="logV50()"></script>
+
+    
   </head>
   <body style="text-align: center; align-content: center">
-    <div class="container">
+    <div class="containerr">
+      <nav class="navbar navbar-expand-1g navbar-dark bg-dark">
+        <div
+          class="container"
+          style="text-align: center; align-content: center"
+        >
+          <a href="/" class="navbar-brand"
+            ><i class="fas fa-code me-2"></i>TMNmedia</a
+          >
+          <button
+            class="navbar-toggler"
+            data-bs-target="#my-nav"
+            data-bs-toggle="collapse"
+            aria-controls="my-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/"
+                  ><i class="fas fa-home me-1"></i>Home</a
+                >
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/report"
+                  ><i class="fas fa-globe me-1"></i>R50_SIGNAL-Reports</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/report25"
+                  ><i class="fas fa-globe me-1"></i>R25_SIGNAL-Reports</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/logout"
+                  ><i class="fas fa-key me-1"></i>Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <div style="text-align: center; align-items: center">
-        <h1 style="text-align: center">TMNMEDIA SIGNAL ALERT</h1>
+        
         <h3 style="text-align: center" id="datupdte">====================</h3>
         <h1 style="text-align: center" id="tick-time">---</h1>
         <h3 style="text-align: center">====================</h3>
@@ -631,5 +728,13 @@
         return;
     } checkserverti()
     </script>
+
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js"
+      integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      ></script>
+      <script src="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.js"></script>
   </body>
 </html>
