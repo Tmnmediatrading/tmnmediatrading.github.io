@@ -33,7 +33,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="rd1025.js" onload="logV50()"></script>
+    
+     <script src="rd1025.js" onload="logV50()"></script> 
+   
 
     <style>
       * {
@@ -68,12 +70,31 @@
         min-height: 90vh;
       }
 
+      th,
+      td {
+        border-collapse: collapse;
+        padding: 10px;
+      }
+
+      .texttable {
+        font-size: x-small;
+        text-size-adjust: auto;
+        text-wrap: wrap;
+        width: 15%;
+      }
+
+      .texttable2 {
+        font-size: 8px;
+        text-size-adjust: auto;
+        text-wrap: wrap;
+        width: 10%;
+      }
       .content-table {
         border-collapse: collapse;
         margin: 25px 0;
         align-content: center;
         border-radius: 5px 5px 0 0;
-
+        border-spacing: 40px;
         overflow-x: auto;
         align-items: center;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -88,11 +109,32 @@
 
       .content-table th,
       .content-table td {
-        padding: 8px 8px;
+        padding: 4px 4px;
       }
 
-      .content-table tbody tr {
+      .content-table tbody {
         border-bottom: 1px solid #dddddd;
+      }
+
+      .button1 {
+        border: none;
+        color: white;
+
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /*font-size: 18px; */
+        margin: 4px 2px;
+        font-family: "Source Sans Pro", sans-serif;
+        margin-top: 4px;
+        border-radius: 5px;
+        word-spacing: 10px;
+        background-color: #008cba; /* Blue /Green -#04AA6D; */
+
+        padding: 6px 25px;
+        margin-top: 4px;
+        border-radius: 5px;
+        word-spacing: 10px;
       }
 
       tbody,
@@ -106,12 +148,8 @@
         border-width: thin;
       }
 
-      th,
-      td {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
+      tr {
+        border-bottom: 2px solid rgb(3, 0, 10);
       }
 
       .content-table tbody tr:nth-of-type(even) {
@@ -133,6 +171,10 @@
           width: 100%;
           padding: 0%;
         }
+
+        .mobilefont {
+          font-size: 8px;
+        }
       }
       @media screen and (max-width: 768px) {
         .containerr,
@@ -140,6 +182,9 @@
         .containerr-sm {
           width: 100%;
           padding: 0%;
+        }
+        .mobilefont {
+          font-size: 10px;
         }
       }
       @media screen and (max-width: 1200px) {
@@ -163,16 +208,32 @@
       }
 
       /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-      @media screen and (max-width: 400px) {
+      /* @media screen and (max-width: 400px) {
         .containerr {
           float: none;
           width: 100%;
         }
+        .mobilefont {
+          font-size: 8px;
+        }
+      } */
+      @media screen and (max-width: 400px) {
+        .containerr,
+        .containerr-lg,
+        .containerr-md,
+        .containerr-sm {
+          float: none;
+          width: 100%;
+        }
+        .mobilefont {
+          font-size: 8px;
+        }
       }
     </style>
 
-
-    <script src="rd1025.js" onload="logV50()"></script>
+    
+    <!-- <script src="rd1025.js" onload="logV50()"></script> -->
+    <script src="brk_50.js" onload="logV50()"></script>
 
     
   </head>
@@ -197,7 +258,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div id="my-nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto mobilefont">
               <li class="nav-item active">
                 <a class="nav-link" href="/"
                   ><i class="fas fa-home me-1"></i>Home</a
@@ -224,12 +285,12 @@
         </div>
       </nav>
 
-      <div style="text-align: center; align-items: center">
+      <div style="text-align: center; align-items: center" class="mobilefont">
         
-        <h3 style="text-align: center" id="datupdte">====================</h3>
-        <h1 style="text-align: center" id="tick-time">---</h1>
-        <h3 style="text-align: center">====================</h3>
-        <h5 style="text-align: center" id="datupdte12">--</h5> <h4 style="text-align: center" id="datupdte2"></h4>
+        <h5 style="text-align: center" id="datupdte">===========</h5>
+        <h4 style="text-align: center" id="tick-time">---</h4>
+        <h5 style="text-align: center">===========</h5>
+        <h5 style="text-align: center; display: none;" id="datupdte12"></h5> <h4 style="text-align: center" id="datupdte2"></h4>
       </div>
 
       <div
@@ -239,17 +300,17 @@
             align-content: center;
             padding: 10px;
             align-items: center;
-            overflow-x: auto;
+           /* overflow-x: auto;*/
           "
         >
           <table
             border="2"
-            class="content-table"
+            class="content-table mobilefont"
             style="
               display: inline-table;
               text-decoration: none;
               text-size-adjust: auto;
-              font-size: medium;
+              /*font-size: medium;*/
               background-color: rgb(255, 253, 253);
               color: rgb(6, 6, 6);
               margin: 5px auto;
@@ -262,8 +323,13 @@
               width: 100%;
             "
           >
+          <caption
+              style="text-align: center; caption-side: top; font-size: 14px"
+            >
+            R_50 INDEX{GOES-OUTSIDE(+0.145/-0.168)2min} SET UP BELOW
+            </caption>
             <tr style="background-color: black; color: #eee">
-          <h3 style="text-align: center">R_50 INDEX{GOES-OUTSIDE(+0.145/-0.168)2min} SET UP BELOW</h3>
+          
 
           <th>LAST-TICK VALUE</th>
           <th>CURRENT BAR SIZE</th>
@@ -460,10 +526,14 @@
             <td id="winratiob10">---</td>
           </tr>
         </table>
+
+        
         <br /><br />
       </div>
-
+      <marquee class="mobilefont" style=" background: black;color: yellow;  font-weight: bold;" behavior="scroll" direction="left">FREE SIGNAL ON JUST 1 - INDEX TILL FEBUARY 2024. FOR SIGNALS ON 5-INDEX OR MORE ON DERIV CONTACT TMNMEDIA ON +234 9011181115...!</marquee>
+      <br /><br />
       <div style="text-align: center">
+
         <a
           style="text-align: center; font-weight: bold"
           href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/"
@@ -521,7 +591,7 @@
       </div>
 
       <br /><br />
-    <section style="text-align: center; align-content: center; background-color: grey; margin: auto;align-content: center;
+    <section class="mobilefont" style="text-align: center; align-content: center; background-color: grey; margin: auto;align-content: center;
     align-items: center;
     padding: 10px 15px;">
       <div
