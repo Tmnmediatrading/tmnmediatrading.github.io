@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>TMNMEDIA SIGNAL ALERT FREE</title>
-
+    <title>TMNmedia FREE SIGNAL ALERT</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -33,10 +31,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
-     <script src="rd1025.js" onload="logV50()"></script> 
-   
 
+    <script src="5signals.js" onload="logR25(),logR10(),logR50(),logRDBEAR(),logRDBULL()"></script>
     <style>
       * {
         /* Change your font family */
@@ -230,14 +226,10 @@
         }
       }
     </style>
-
-    
-    <!-- <script src="rd1025.js" onload="logV50()"></script> -->
-    <script src="brk_50.js" onload="logV50()"></script>
-
-    
   </head>
   <body style="text-align: center; align-content: center">
+    <!-- Section: Design Block -->
+
     <div class="containerr">
       <nav class="navbar navbar-expand-1g navbar-dark bg-dark">
         <div
@@ -260,47 +252,81 @@
           <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto mobilefont">
               <li class="nav-item active">
-                <a class="nav-link" href="/"
+                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/"
                   ><i class="fas fa-home me-1"></i>Home</a
                 >
               </li>
+              <!--
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-globe me-1"></i>R10_SIGNAL</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/report25"
+                  ><i class="fas fa-globe me-1"></i>R25_SIGNAL</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/report"
+                  ><i class="fas fa-globe me-1"></i>R50_SIGNAL</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-globe me-1"></i>RD-BEAR_SIGNAL</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-globe me-1"></i>RD-BULL_SIGNAL</a
+                >
+              </li>
+              -->
 
               <li class="nav-item active">
-                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/report"
-                  ><i class="fas fa-globe me-1"></i>R50_SIGNAL-Reports</a
+                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/subscribe" target="_blank"
+                  ><i class="fas fa-box me-1"></i>Subscribe</a
                 >
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/report25"
-                  ><i class="fas fa-globe me-1"></i>R25_SIGNAL-Reports</a
+                <a class="nav-link" href="https://tmnmediatrading-feed.onrender.com/login" target="_blank"
+                  ><i class="fas fa-key me-1"></i>Login</a
                 >
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/logout"
-                  ><i class="fas fa-key me-1"></i>Logout</a
-                >
-              </li>
+              
             </ul>
           </div>
         </div>
       </nav>
+      <div style="text-align: center; align-items: center; margin-top: 10px">
+        <button
+          style="
+            padding: 1px 11px;
+            padding-bottom: 1px;
+            text-align: center;
+            border-radius: 5px;
+            text-align: center;
+          "
+          id="tick-time"
+        ></button>
 
-      <div style="text-align: center; align-items: center" class="mobilefont">
-        
-        <h5 style="text-align: center" id="datupdte">===========</h5>
-        <h4 style="text-align: center" id="tick-time">---</h4>
-        <h5 style="text-align: center">===========</h5>
-        <h5 style="text-align: center; display: none;" id="datupdte12"></h5> <h4 style="text-align: center" id="datupdte2"></h4>
       </div>
 
-      <div
-      id="v50"
+      <div style="text-align: center; align-content: center">
+        <!-- Button trigger modal -->
+          <strong>
+            <p style="text-align: center" id="datupdte2"></p>
+          </strong>
+        
+        <div
+          id="v50"
           style="
             text-align: center;
             align-content: center;
             padding: 10px;
             align-items: center;
-           /* overflow-x: auto;*/
+            /* overflow-x: auto; */
           "
         >
           <table
@@ -309,388 +335,401 @@
             style="
               display: inline-table;
               text-decoration: none;
-              text-size-adjust: auto;
-              /*font-size: medium;*/
+              /*text-size-adjust: auto;*/
+              /*font-size: small;*/
               background-color: rgb(255, 253, 253);
               color: rgb(6, 6, 6);
               margin: 5px auto;
-              padding: 1px;
+              /*padding: 1px;*/
               box-sizing: content-box;
               text-align: center;
               align-content: center;
               align-items: center;
               overflow-x: auto;
-              width: 100%;
+              width: 92vw;
             "
           >
-          <caption
+            <caption
               style="text-align: center; caption-side: top; font-size: 14px"
             >
-            R_50 INDEX{GOES-OUTSIDE(+0.135/-0.152)2min} SET UP BELOW
+              TMNmedia Signals
             </caption>
-            <tr style="background-color: black; color: #eee">
-          
 
-          <th>LAST-TICK VALUE</th>
-          <th>CURRENT BAR SIZE</th>
-          <th>SIGNAL SET-UP</th>
-          <th>ENTRY SET-UP.</th>
-          <th>TRADE - RESULT</th>
-          
-        </tr>
-        <tr style="font-weight: bold; text-size-adjust: auto">
-          <td id="lastick50">---</td>
-          <td id="curbar50">---</td>
-          <td id="signal50">---</td>
-          <td id="entry50">---</td>
-          <td id="traderesult50">---</td>
-          
-        </tr>
-      </table>
-    </div>
+            <tr style="background-color: black; color: #eee; height: 30px">
+              <th style="width: 30%">INDEX-TYPE</th>
+              <th style="width: 22%">PRICE</th>
+              <th>SIGNAL</th>
+              <th>ENTRY</th>
+              <th>RESULT</th>
+              <th>SELECTION</th>
+            </tr>
+            <tr style="font-weight: bold" id="R_10X">
+              <td id="R_10INDEX"><a style="text-decoration: none;" href="https://tmnmediatrading-feed.onrender.com/report10" target="_blank"
+                ></i>VOL 10 INDEX</a
+              ></td>
+              <td id="lastick10">---</td>
+              <td class="texttable" id="signal10">---</td>
+              <td class="texttable" id="entry10">---</td>
+              <td class="texttable" id="traderesult10">---</td>
+              <td class="texttable2">
+                <li style="text-align: center; list-style: none">
+                  <select
+                    name="R_10trader"
+                    id="R_10trader"
+                    style="background-color: rgb(1, 1, 1); color: #e1f338"
+                    required
+                  >
+                    <option
+                      value="ON"
+                      selected
+                      style="background-color: #e1f338; color: green"
+                    >
+                      DISPLAY ON
+                    </option>
+                    <option value="OFF">DISPLAY OFF</option>
+                  </select>
+                </li>
+              </td>
+            </tr>
 
+            <tr style="font-weight: bold" id="R_25X"> 
+                <td id="R_25INDEX">
+                    <a style="text-decoration: none;" href="https://tmnmediatrading-feed.onrender.com/report25" target="_blank"
+                      ></i>VOL 25 INDEX</a
+                    >
+                  </td>
+                
+                  
+                  <td id="lastick25"><a style="text-decoration: none;" 
+                    ></i>---</a
+                  ></td>
+                <td class="texttable" id="signal25">---</td>
+                <td class="texttable" id="entry25">---</td>
+                <td class="texttable" id="traderesult25">---</td>
+              <td class="texttable2">
+                <li style="text-align: center; list-style: none">
+                  <select
+                    name="R_25trader"
+                    id="R_25trader"
+                    style="background-color: rgb(1, 1, 1); color: #e1f338"
+                    required
+                  >
+                    <option
+                      value="ON"
+                      selected
+                      style="background-color: #e1f338; color: green"
+                    >
+                      DISPLAY ON
+                    </option>
+                    <option value="OFF">DISPLAY OFF</option>
+                  </select>
+                </li>
+              </td>
+            </tr>
 
-      <div
-        id="bear"
-        style="
-          text-align: center;
-          align-content: center;
-          padding: 10px;
-          align-items: center;
-        "
-      >
-        <table
-          border="2"
-          class="content-table"
+            <tr id="R_50X" style="font-weight: bold; text-size-adjust: auto">
+              <td id="R_50INDEX"><a style="text-decoration: none;" href="https://tmnmediatrading-feed.onrender.com/report50" target="_blank"
+                ></i>VOL 50 INDEX</a
+              ></td>
+              <td id="lastick50">---</td>
+              <td class="texttable" id="signal50">---</td>
+              <td class="texttable" id="entry50">---</td>
+              <td class="texttable" id="traderesult50">---</td>
+              <td class="texttable2">
+                <li style="text-align: center; list-style: none">
+                  <select
+                    name="R_50trader"
+                    id="R_50trader"
+                    style="background-color: rgb(1, 1, 1); color: #e1f338"
+                    required
+                  >
+                    <option
+                      value="ON"
+                      selected
+                      style="background-color: #e1f338; color: green"
+                    >
+                      DISPLAY ON
+                    </option>
+                    <option value="OFF">DISPLAY OFF</option>
+                  </select>
+                </li>
+              </td>
+            </tr>
+
+            <tr id="RDBEAR" style="font-weight: bold; text-size-adjust: auto">
+              <td id="RDBEAR_INDEX"><a style="text-decoration: none;" href="https://tmnmediatrading-feed.onrender.com/reportbear" target="_blank"
+                ></i>RD-BEAR</a
+              ></td>
+              <td id="lastickRDBEAR">---</td>
+              <td class="texttable" id="signalRDBEAR">---</td>
+              <td class="texttable" id="entryRDBEAR">---</td>
+              <td class="texttable" id="traderesultRDBEAR">---</td>
+              <td class="texttable2">
+                <li style="text-align: center; list-style: none">
+                  <select
+                    name="RDBEARtrader"
+                    id="RDBEARtrader"
+                    style="background-color: rgb(1, 1, 1); color: #e1f338"
+                    required
+                  >
+                    <option
+                      value="ON"
+                      selected
+                      style="background-color: #e1f338; color: green"
+                    >
+                      DISPLAY ON
+                    </option>
+                    <option value="OFF">DISPLAY OFF</option>
+                  </select>
+                </li>
+              </td>
+            </tr>
+
+            <tr style="font-weight: bold; text-size-adjust: auto" id="RDBULL">
+              <td id="RDBULLINDEX"><a style="text-decoration: none;" href="https://tmnmediatrading-feed.onrender.com/reportbull" target="_blank"
+                ></i>RD-BULL</a
+              ></td>
+              <td id="lastickRDBULL">---</td>
+              <td class="texttable" id="signalRDBULL">---</td>
+              <td class="texttable" id="entryRDBULL">---</td>
+              <td class="texttable" id="traderesultRDBULL">---</td>
+              <td class="texttable2">
+                <li style="text-align: center; list-style: none">
+                  <select
+                    name="RDBULLtrader"
+                    id="RDBULLtrader"
+                    style="background-color: rgb(1, 1, 1); color: #e1f338"
+                    required
+                  >
+                    <option
+                      value="ON"
+                      selected
+                      style="background-color: #e1f338; color: green"
+                    >
+                      DISPLAY ON
+                    </option>
+                    <option value="OFF">DISPLAY OFF</option>
+                  </select>
+                </li>
+              </td>
+            </tr>
+          </table>
+          <marquee class="mobilefont" style=" background: black;color: yellow;  font-weight: bold;" behavior="scroll" direction="left">FREE SIGNAL NOW ON 5 - INDEX TILL FEBUARY 2024. FOR SIGNALS SUBSCRIPTION ON 5-INDEX OR MORE ON DERIV CONTACT TMNMEDIA ON +234 9011181115...!</marquee>
+          <br /><br />
+          <div style="text-align: center; font-size: 14px">
+            <a
+              style="text-align: center; font-weight: bold"
+              href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/"
+              >CLICK HERE TO CREATE A DERIV DEMO ACCOUNT</a
+            >
+            <br /><br />
+            <a
+              href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/"
+            >
+              <img
+                src="https://media.binary.com/uploads/en016-970x90_english.jpeg"
+                style="align-content: center; width: 90%"
+              />
+            </a>
+          </div>
+
+          <div
+            id="v25"
+            style="
+              text-align: center;
+              align-content: center;
+              padding: 10px;
+              align-items: center;
+              overflow-x: auto;
+            "
+          >
+            <table
+              border="2"
+              class="content-table mobilefont"
+              style="
+                display: inline-table;
+                text-decoration: none;
+                text-size-adjust: auto;
+                /*font-size: smaller;*/
+                background-color: rgb(255, 253, 253);
+                color: rgb(6, 6, 6);
+                margin: 5px auto;
+                padding: 1px;
+                box-sizing: content-box;
+                text-align: center;
+                align-content: center;
+                align-items: center;
+                overflow-x: auto;
+                width: 90vw;
+              "
+            >
+              <tr style="background-color: black; color: #eee">
+                <caption
+                  style="text-align: center; caption-side: top; font-size: 12px"
+                >
+                  <strong>
+                    GOES-OUTSIDE BARRIER OFFSET SET-UP FOR 2MINS BELOW</strong
+                  >
+                </caption>
+
+                <th>INDEX</th>
+                <th>BARRIER OFFSET</th>
+                <th>INDEX</th>
+                <th>BARRIER OFFSET</th>
+              </tr>
+              <tr
+                style="
+                  font-weight: bold;
+                  text-size-adjust: auto;
+                  border-bottom: 1px solid rgb(3, 0, 10);
+                "
+              >
+                <td>VOL 10 INDEX</td>
+                <td>(+0.72/-0.86)</td>
+                <td>RD-BEAR</td>
+                <td>(+1.68/-1.92)</td>
+              </tr>
+              <tr
+                style="
+                  font-weight: bold;
+                  text-size-adjust: auto;
+                  border-bottom: 1px solid rgb(3, 0, 10);
+                "
+              >
+                <td>VOL 25 INDEX</td>
+                <td>(+0.485/-0.665)</td>
+                <td>RD-BULL</td>
+                <td>(+1.75/-2.35)</td>
+              </tr>
+              <tr
+                style="
+                  font-weight: bold;
+                  text-size-adjust: auto;
+                  border-bottom: 1px solid rgb(3, 0, 10);
+                "
+              >
+                <td>VOL 50 INDEX</td>
+                <td>(+0.1300/-0.1500)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <footer>
+        <section
+          class="mobilefont"
           style="
-            display: inline-block;
-            text-decoration: none;
-            text-size-adjust: auto;
-            font-size: medium;
-            background-color: rgb(255, 253, 253);
-            color: rgb(6, 6, 6);
-            margin: 5px auto;
-            padding: 1px;
-            box-sizing: content-box;
             text-align: center;
             align-content: center;
-            align-items: center;
-            overflow-x: auto;
-            width: 100%;
-          "
-        >
-          <tr>
-            <h2 style="text-align: center">BEAR-SIGNAL SET UP BELOW</h2>
-
-            <th>LAST-TICK VALUE</th>
-            <th>PREVIOUS BAR SIZE</th>
-            <th>CURRENT BAR SIZE</th>
-            <th>SIGNAL SET-UP</th>
-            <th>ENTRY SET-UP.</th>
-            <th>EXIT-TICK-VALUE</th>
-            <th>ENTRY-TICK-VALUE</th>
-            <th>ENTRY-STATUS</th>
-            <th>TRADE-WON</th>
-            <th>TRADE-LOST</th>
-            <th>WIN-RATE %</th>
-          </tr>
-          <tr style="font-weight: bold; text-size-adjust: auto">
-            <td id="lastick25">---</td>
-            <td id="prebar25">---</td>
-            <td id="curbar25">---</td>
-            <td id="signal25">---</td>
-            <td id="entry25">---</td>
-            <td id="exitick25">---</td>
-            <td id="entrytick25">---</td>
-            <td id="entrystatus25">---</td>
-            <td id="tradewon">---</td>
-            <td id="tradelost">---</td>
-            <td id="winratio">---</td>
-          </tr>
-        </table>
-      </div>
-
-      <div
-        id="v25"
-        style="
-          text-align: center;
-          align-content: center;
-          padding: 10px;
-          align-items: center;
-        "
-      >
-        <table
-          border="2"
-          class="content-table"
-          style="
-            display: inline-block;
-            text-decoration: none;
-            text-size-adjust: auto;
-            font-size: medium;
-            background-color: rgb(255, 253, 253);
-            color: rgb(6, 6, 6);
-            margin: 5px auto;
-            padding: 1px;
-            box-sizing: content-box;
-            text-size-adjust: auto;
-            text-align: center;
-            overflow-x: auto;
-            width: 100%;
-          "
-        >
-          <tr>
-            <h2 style="text-align: center">25 INDEX SIGNAL SET UP BELOW</h2>
-
-            <th>LAST-TICK VALUE</th>
-            <th>PREVIOUS BAR SIZE</th>
-            <th>CURRENT BAR SIZE</th>
-            <th>SIGNAL SET-UP</th>
-            <th>ENTRY SET-UP.</th>
-            <th>EXIT-TICK-VALUE</th>
-            <th>ENTRY-TICK-VALUE</th>
-            <th>ENTRY-STATUS</th>
-            <th>TRADE-WON</th>
-            <th>TRADE-LOST</th>
-            <th>WIN-RATE %</th>
-          </tr>
-          <tr style="font-weight: bold; text-size-adjust: auto">
-            <td id="lastick">---</td>
-            <td id="prebar">---</td>
-            <td id="curbar">---</td>
-            <td id="signal">---</td>
-            <td id="entry">---</td>
-            <td id="exitick">---</td>
-            <td id="entrytick">---</td>
-            <td id="entrystatus">---</td>
-            <td id="tradewonb">---</td>
-            <td id="tradelostb">---</td>
-            <td id="winratiob">---</td>
-          </tr>
-        </table>
-        <br /><br />
-      </div>
-      <div
-        id="v10"
-        style="
-          text-align: center;
-          align-content: center;
-          padding: 10px;
-          align-items: center;
-        "
-      >
-        <table
-          border="2"
-          class="content-table"
-          style="
-            display: inline-block;
-            text-decoration: none;
-            text-size-adjust: auto;
-            font-size: medium;
-            background-color: rgb(255, 253, 253);
-            color: rgb(6, 6, 6);
-            margin: 5px auto;
-            padding: 1px;
-            box-sizing: content-box;
-            text-size-adjust: auto;
-            text-align: center;
-            overflow-x: auto;
-            width: 100%;
-          "
-        >
-          <tr>
-            <h2 style="text-align: center">10 INDEX SIGNAL SET UP BELOW</h2>
-
-            <th>LAST-TICK VALUE</th>
-            <th>PREVIOUS BAR SIZE</th>
-            <th>CURRENT BAR SIZE</th>
-            <th>SIGNAL SET-UP</th>
-            <th>ENTRY SET-UP.</th>
-            <th>EXIT-TICK-VALUE</th>
-            <th>ENTRY-TICK-VALUE</th>
-            <th>ENTRY-STATUS</th>
-            <th>TRADE-WON</th>
-            <th>TRADE-LOST</th>
-            <th>WIN-RATE %</th>
-          </tr>
-          <tr style="font-weight: bold; text-size-adjust: auto">
-            <td id="lastick10">---</td>
-            <td id="prebar10">---</td>
-            <td id="curbar10">---</td>
-            <td id="signal10">---</td>
-            <td id="entry10">---</td>
-            <td id="exitick10">---</td>
-            <td id="entrytick10">---</td>
-            <td id="entrystatus10">---</td>
-            <td id="tradewonb10">---</td>
-            <td id="tradelostb10">---</td>
-            <td id="winratiob10">---</td>
-          </tr>
-        </table>
-
-        
-        <br /><br />
-      </div>
-      <marquee class="mobilefont" style=" background: black;color: yellow;  font-weight: bold;" behavior="scroll" direction="left">FREE SIGNAL ON JUST 1 - INDEX TILL FEBUARY 2024. FOR SIGNALS ON 5-INDEX OR MORE ON DERIV CONTACT TMNMEDIA ON +234 9011181115...!</marquee>
-      <br /><br />
-      <div style="text-align: center">
-
-        <a
-          style="text-align: center; font-weight: bold"
-          href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/"
-          >CLICK HERE TO CREATE A DERIV DEMO ACCOUNT</a
-        >
-        <br /><br />
-        <a href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/">
-          <img
-            src="https://media.binary.com/uploads/en016-970x90_english.jpeg"
-            style="align-content: center; width: 90%"
-          />
-        </a>
-      </div>
-
-      <br /><br />
-      <div style="text-align: center; display: flex; justify-content: center">
-        <a
-          href="/guide.html"
-          style="
-            background-color: #b4009e;
-            color: #ffffff;
+            background-color: grey;
+            margin: auto;
             align-content: center;
             align-items: center;
             padding: 10px 15px;
-            font-size: 15px;
           "
-          class="top-btn green-btn remove-padding"
         >
-          <button style="font-weight: bolder">
-            CLICK TO WATCH STEP BY STEP GUIDE ON HOW TO USE SIGNAL
-          </button>
-        </a>
-      </div>
-      <br /><br />
-      <a href="https://t.me/TMNmediaSignalfree"
-        ><img
-          src="https://i0.wp.com/kosherworkingmom.com/wp-content/uploads/2018/05/telegram-icon.png?fit=707%2C217&ssl=1"
-          alt="HTML tutorial"
-          style="width: 180px; height: 45px; font-weight: bold"
-        />
-        <br />
-        JOIN TMNMEDIA ON TELEGRAM
-      </a>
+          <div
+            style="
+              display: grid;
+              align-content: center;
 
-      
-      <br /><br /><br />
+              text-align: center;
+            "
+          >
+            <p style="font-size: smaller; align-content: center">
+              <span
+                style="box-sizing: border-box; color: black; text-align: center"
+                ><strong style="box-sizing: border-box">Disclaimer:</strong>
+                Deriv offers complex derivatives, such as options and contracts
+                for difference (“CFDs”). These products may not be suitable for
+                all clients, and trading them puts you at risk. Please make sure
+                that you understand the following risks before trading Deriv
+                products: a) you may lose some or all of the money you invest in
+                the trade, b) if your trade involves currency conversion,
+                exchange rates will affect your profit and loss. You should
+                never trade with borrowed money or with money that you cannot
+                afford to lose.
+              </span>
+            </p>
 
-      <div style="text-align: center">
-        <a href="https://track.deriv.com/_m3ZAAY7V9rNB4VdSfJsOp2Nd7ZgqdRLk/1/">
-          <img
-            src="https://media.binary.com/uploads/en016-970x90_english.jpeg"
-            style="align-content: center; width: 90%"
-          />
-        </a>
-      </div>
+            <div
+              style="
+                box-sizing: border-box;
+                color: black;
+                align-content: center;
 
-      <br /><br />
-    <section class="mobilefont" style="text-align: center; align-content: center; background-color: grey; margin: auto;align-content: center;
-    align-items: center;
-    padding: 10px 15px;">
-      <div
-      style="
-        display: grid;
-        align-content: center;
+                text-align: center;
+              "
+            >
+              <p style="font-size: smaller; align-content: center">
+                <span
+                  ><strong style="box-sizing: border-box">Note:</strong> This
+                  site is not a part of the Facebook website or Facebook INC.
+                  Additionally, this site is NOT endorsed by Facebook in ANY
+                  WAY. FACEBOOK is a trademark of Facebook INC.</span
+                >
+              </p>
+            </div>
+          </div>
 
-        text-align: center;
-      "
-      >
-      <p style="font-size: smaller; align-content: center">
-          <span
+          <div
             style="
               box-sizing: border-box;
-              color: black;
+              color: brown;
+              align-content: center;
+
               text-align: center;
-             
             "
-            ><strong style="box-sizing: border-box">Disclaimer:</strong>
-            Deriv offers complex derivatives, such as options and contracts for difference (“CFDs”). These products may not be suitable for all clients, and trading them puts you at risk. Please make sure that you understand the following risks before trading Deriv products: a) you may lose some or all of the money you invest in the trade, b) if your trade involves currency conversion, exchange rates will affect your profit and loss. You should never trade with borrowed money or with money that you cannot afford to lose. 
-            </span
           >
-      </p>
-      
-      
-      <div
-        style="
-          box-sizing: border-box;
-          color: black;
-          align-content: center;
-          
-          text-align: center;
-        "
-      >
-        <p style="font-size: smaller; align-content: center">
-          <span
-            ><strong style="box-sizing: border-box">Note:</strong> This site
-            is not a part of the Facebook website or Facebook INC.
-            Additionally, this site is NOT endorsed by Facebook in ANY WAY.
-            FACEBOOK is a trademark of Facebook INC.</span
+            <p>
+              <span style="box-sizing: border-box; color: white"
+                ><a
+                  href="https://eu.docs.wps.com/l/sAJtriWO-5fxGg_iYoZSdFA?v=v2"
+                  style="box-sizing: border-box; font-size: inherit"
+                  target="_top"
+                  >Privacy Policy</a
+                >
+                |
+                <a
+                  href="https://eu.docs.wps.com/l/sAL_WwoK-5fxG65aZoZSdFA?v=v2"
+                  style="box-sizing: border-box; font-size: inherit"
+                  target="_top"
+                  >Disclaimer</a
+                >
+                |
+                <a
+                  href="https://wa.me/+2349011181115"
+                  style="box-sizing: border-box; font-size: inherit"
+                  target="_top"
+                  >Contact Us</a
+                ></span
+              >
+            </p>
+          </div>
+
+          <div
+            style="
+              margin-bottom: 0;
+              align-content: center;
+              padding-inline: 10px;
+            "
           >
-        </p>
+            <strong style="box-sizing: border-box"
+              >TMNmedia Trading 2024 ...</strong
+            >
+            <button
+              id="checkOnline"
+              value=""
+              style="background-color: #888"
+            ></button>
+          </div>
+        </section>
+        </footer>
       </div>
-
-      
     </div>
 
-    <div style="
-    box-sizing: border-box;
-    color: brown;
-    align-content: center;
-    
-    text-align: center;
-  ">
-      <p>
-        <span style="box-sizing: border-box; color: white"
-          ><a
-            
-            href="https://eu.docs.wps.com/l/sAJtriWO-5fxGg_iYoZSdFA?v=v2"
-            style="box-sizing: border-box; font-size: inherit"
-            target="_top"
-            >Privacy Policy</a
-          >
-          |
-          <a
-            
-            href="https://eu.docs.wps.com/l/sAL_WwoK-5fxG65aZoZSdFA?v=v2"
-            style="box-sizing: border-box; font-size: inherit"
-            target="_top"
-            >Disclaimer</a
-          >
-          |
-          <a
-            
-            href="https://wa.me/+2349011181115"
-            style="box-sizing: border-box; font-size: inherit"
-            target="_top"
-            >Contact Us</a
-          ></span
-        >
-      </p>
-    </div>
-
-    
-    <div
-      style="margin-bottom: 0; align-content: center; padding-inline: 10px"
-    >
-      TMNmedia Trading Bot 2024..... STATUS
-      <button
-        id="checkOnline"
-        value=""
-        style="background-color: #888"
-      ></button>
-    </div>
-    
-    </section>
-
-      
-    
     <script>
       if (Notification.permission === "granted") {
         //showNotification();
@@ -735,6 +774,34 @@
             return;
           }, 300000);
         }
+
+        if (document.getElementById("RDBULLtrader").value != "ON") {
+          document.getElementById("RDBULL").style.display = "none";
+        } else {
+          document.getElementById("RDBULL").style.display = "revert";
+        }
+
+        if (document.getElementById("RDBEARtrader").value != "ON") {
+          document.getElementById("RDBEAR").style.display = "none";
+        } else {
+          document.getElementById("RDBEAR").style.display = "revert";
+        }
+
+        if (document.getElementById("R_50trader").value != "ON") {
+          document.getElementById("R_50X").style.display = "none";
+        } else {
+          document.getElementById("R_50X").style.display = "revert";
+        }
+        if (document.getElementById("R_25trader").value != "ON") {
+          document.getElementById("R_25X").style.display = "none";
+        } else {
+          document.getElementById("R_25X").style.display = "revert";
+        }
+        if (document.getElementById("R_10trader").value != "ON") {
+          document.getElementById("R_10X").style.display = "none";
+        } else {
+          document.getElementById("R_10X").style.display = "revert";
+        }
       }, 1000);
 
       function checkserverS() {
@@ -772,39 +839,31 @@
             );
             //document.getElementById("servertimer").innerText = tradetimer;
 
-            if (systemsecs > serversecs + 2 || systemsecs < serversecs - 2) {
-              //document.getElementById("v50").style.display = "none";
-             // checkservertimeB();
-              //checkservertimeB25();
-            } else {
-              document.getElementById("datupdte12").innerText =
-                "TIME IS CONFIRMED =OK=";
-              document.getElementById("datupdte12").style.color = "blue";
-              // document.getElementById("v25").style.display = "none"
-              // checkservertimeB()
-              // checkservertimeB25()
-            }
+            // if (systemsecs > serversecs + 2 || systemsecs < serversecs - 2) {
+            //   //document.getElementById("v50").style.display = "none";
+            //   //checkservertimeB();
+            //   //checkservertimeB25();
+            // } else {
+            //   document.getElementById("datupdte12").innerText =
+            //     "TIME IS CONFIRMED =OK=";
+            //   document.getElementById("datupdte12").style.color = "blue";
+            //   // document.getElementById("v25").style.display = "none"
+            //   // checkservertimeB()
+            //   // checkservertimeB25()
+            // }
           } catch (error) {}
         };
       }
       checkserverS();
-
-      function checkserverti() {
-        
-        document.getElementById("bear").style.display = "none"
-        document.getElementById("v25").style.display = "none"
-        document.getElementById("v10").style.display = "none"
-
-        return;
-    } checkserverti()
     </script>
 
-      <script
+    <!-- Section: Design Block -->
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js"
       integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-      ></script>
-      <script src="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.js"></script>
+    ></script>
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.13.4/datatables.min.js"></script>
   </body>
 </html>
